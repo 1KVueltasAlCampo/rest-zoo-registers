@@ -19,8 +19,8 @@ public class AnimalServiceImpl implements AnimalService {
     public final AnimalRepository animalRepository;
 
     @Override
-    public Animal getAnimal(UUID animalId) {
-        return animalRepository.findById(animalId).orElse(null);
+    public Animal getAnimal(String animalName) {
+        return animalRepository.findById(animalName).orElse(null); //No estoy seguro
     }
 
     @Override

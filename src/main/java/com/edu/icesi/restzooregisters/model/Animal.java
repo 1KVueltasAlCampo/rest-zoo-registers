@@ -1,5 +1,6 @@
 package com.edu.icesi.restzooregisters.model;
 
+import com.edu.icesi.restzooregisters.constants.GenericTurtles;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -30,9 +31,14 @@ public class Animal {
     private int age;
     private double height;
     private Date arrivalDate;
+    private UUID fatherID;
+    private UUID motherID;
 
     @PrePersist
-    public void generateId(){
+    public void generateIds(){
         this.id = UUID.randomUUID();
+        this.fatherID = GenericTurtles.GENERIC_MALE_ID;
+        this.motherID = GenericTurtles.GENERIC_FEMALE_ID;
     }
+
 }

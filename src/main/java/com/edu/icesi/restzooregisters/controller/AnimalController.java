@@ -19,12 +19,12 @@ public class AnimalController implements RestZooRegistersAPI {
     public final AnimalMapper animalMapper;
 
     @Override
-    public AnimalDTO getAnimal(UUID animalId) {
-        return animalMapper.fromAnimal(animalService.getAnimal(animalId));
+    public AnimalDTO getAnimal(String animalName) {
+        return animalMapper.fromAnimal(animalService.getAnimal(animalName));
     }
 
     @Override
-    public AnimalDTO createUser(AnimalDTO animalDTO) {
+    public AnimalDTO createAnimal(AnimalDTO animalDTO) {
         return animalMapper.fromAnimal(animalService.createAnimal(animalMapper.fromDTO(animalDTO)));
     }
 
