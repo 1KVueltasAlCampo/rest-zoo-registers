@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.UUID;
 
@@ -20,7 +21,7 @@ public class AnimalDTO {
     private int age;
     private double height;
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private Date arrivalDate;
+    private LocalDateTime arrivalDate;
     private UUID fatherID;
     private UUID motherID;
 

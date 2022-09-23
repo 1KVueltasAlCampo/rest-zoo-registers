@@ -11,6 +11,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.PrePersist;
 import javax.persistence.Table;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.UUID;
 
@@ -30,7 +31,7 @@ public class Animal {
     private double weight;
     private int age;
     private double height;
-    private Date arrivalDate;
+    private LocalDateTime arrivalDate;
     private UUID fatherID;
     private UUID motherID;
 
